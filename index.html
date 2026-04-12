@@ -1352,12 +1352,76 @@
         padding: 28px 22px;
       }
 
+      .device-shell {
+        width: min(100%, 320px);
+        padding: 12px;
+        border-radius: 28px;
+      }
+
       .device-screen {
-        min-height: 500px;
+        min-height: auto;
+        padding: 44px 18px 18px;
+        border-radius: 20px;
+      }
+
+      .device-shell::before {
+        top: 8px;
+        height: 18px;
+      }
+
+      .device-topline {
+        margin-bottom: 16px;
+        font-size: 10px;
+      }
+
+      .device-header {
+        padding: 14px;
+        margin-bottom: 12px;
+        border-radius: 16px;
+      }
+
+      .device-mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+      }
+
+      .device-title strong {
+        font-size: 14px;
+      }
+
+      .device-title span,
+      .device-status {
+        font-size: 10px;
       }
 
       .device-primary-card h3 {
-        font-size: 24px;
+        font-size: 20px;
+        max-width: 220px;
+      }
+
+      .device-primary-card {
+        padding: 16px;
+        border-radius: 18px;
+      }
+
+      .device-primary-card p {
+        font-size: 13px;
+        margin-bottom: 14px;
+      }
+
+      .device-chip-row {
+        gap: 8px;
+      }
+
+      .device-chip {
+        padding: 7px 10px;
+        font-size: 11px;
+      }
+
+      .device-stat-grid,
+      .device-stack {
+        display: none;
       }
 
       .proof-strip-inner {
