@@ -192,11 +192,12 @@
       gap: 8px;
       padding: 8px 18px;
       background: var(--accent);
-      color: #08111f;
+      color: #f7f3ff;
       border-radius: var(--radius-sm);
       font-size: 14px;
       font-weight: 600;
       transition: background 0.2s, transform 0.15s;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
     }
 
     .nav-cta:hover {
@@ -263,8 +264,8 @@
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-      gap: 56px;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+      gap: 44px;
       align-items: center;
     }
 
@@ -423,15 +424,16 @@
 
     .hero-visual {
       position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.75fr);
-      gap: 24px;
-      align-items: end;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 640px;
     }
 
     .device-shell {
       position: relative;
-      min-height: 560px;
+      width: min(100%, 430px);
+      min-height: 620px;
       padding: 18px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 32px;
@@ -458,20 +460,12 @@
     .device-screen {
       position: relative;
       height: 100%;
-      min-height: 524px;
+      min-height: 584px;
       border-radius: 24px;
       background:
         radial-gradient(circle at top left, rgba(77, 214, 255, 0.12), transparent 35%),
         linear-gradient(180deg, #121b2e 0%, #0b1220 100%);
-      padding: 56px 28px 28px;
-    }
-
-    .device-screen::after {
-      content: '';
-      position: absolute;
-      inset: auto 28px 112px;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.08);
+      padding: 56px 24px 24px;
     }
 
     .device-topline {
@@ -496,32 +490,147 @@
       background: rgba(74, 222, 128, 0.12);
     }
 
-    .device-screen img {
-      width: 144px;
-      height: 144px;
-      margin: 0 auto 24px;
-      filter: drop-shadow(0 22px 46px rgba(0, 0, 0, 0.45));
+    .device-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 18px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
     }
 
-    .device-screen h3 {
-      font-size: 28px;
-      line-height: 1.15;
-      text-align: center;
-      margin-bottom: 10px;
+    .device-header-copy {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    .device-screen p {
-      font-size: 15px;
+    .device-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, rgba(155, 122, 255, 0.24), rgba(77, 214, 255, 0.18));
+      color: #fff;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+
+    .device-mark svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .device-title {
+      display: grid;
+      gap: 3px;
+    }
+
+    .device-title strong {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .device-title span {
+      font-size: 13px;
       color: var(--text-secondary);
-      text-align: center;
+    }
+
+    .device-status {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(77, 214, 255, 0.12);
+      color: var(--accent-alt);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .device-priority {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .device-primary-card {
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(155, 122, 255, 0.12), rgba(255, 255, 255, 0.02)),
+        rgba(255, 255, 255, 0.02);
+    }
+
+    .device-primary-card h3 {
+      font-size: 28px;
+      line-height: 1.08;
+      margin-bottom: 10px;
       max-width: 260px;
-      margin: 0 auto 26px;
+    }
+
+    .device-primary-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      max-width: 280px;
+    }
+
+    .device-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .device-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(10, 14, 23, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text-secondary);
+      font-size: 12px;
+    }
+
+    .device-chip strong {
+      color: var(--text-primary);
+      font-size: 12px;
+    }
+
+    .device-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .device-stat-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .device-stat-card span {
+      display: block;
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .device-stat-card strong {
+      font-size: 18px;
+      line-height: 1.2;
     }
 
     .device-stack {
       display: grid;
-      gap: 14px;
-      margin-top: 44px;
+      gap: 12px;
+      margin-top: 18px;
     }
 
     .device-row {
@@ -529,6 +638,10 @@
       justify-content: space-between;
       align-items: center;
       gap: 12px;
+      padding: 15px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       font-size: 13px;
       color: var(--text-secondary);
     }
@@ -538,52 +651,49 @@
       font-weight: 600;
     }
 
-    .hero-sidecopy {
-      display: grid;
-      gap: 18px;
-      align-self: stretch;
-      padding-bottom: 24px;
+    .hero-float {
+      position: absolute;
+      z-index: 2;
+      max-width: 220px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(10, 14, 23, 0.86);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(14px);
     }
 
-    .hero-kicker {
+    .hero-float.top {
+      top: 60px;
+      right: -10px;
+    }
+
+    .hero-float.bottom {
+      left: -28px;
+      bottom: 58px;
+    }
+
+    .hero-float-label {
+      display: block;
+      margin-bottom: 6px;
       font-family: var(--font-mono);
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--accent-alt);
     }
 
-    .hero-sidecopy h3 {
-      font-size: 28px;
-      line-height: 1.15;
-    }
-
-    .hero-sidecopy p {
-      color: var(--text-secondary);
-      font-size: 16px;
-      max-width: 320px;
-    }
-
-    .hero-points {
-      list-style: none;
-      display: grid;
-      gap: 16px;
-    }
-
-    .hero-points li {
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .hero-points strong {
+    .hero-float strong {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
       font-size: 15px;
+      line-height: 1.3;
     }
 
-    .hero-points span {
-      font-size: 14px;
+    .hero-float p {
+      font-size: 13px;
       color: var(--text-secondary);
+      line-height: 1.5;
     }
 
     .proof-strip {
@@ -1109,7 +1219,6 @@
    ══════════════════════════════════════ */
     @media (max-width: 900px) {
       .hero-inner,
-      .hero-visual,
       .cta-shell,
       .feature-spotlight {
         grid-template-columns: 1fr;
@@ -1138,6 +1247,14 @@
 
       .device-shell {
         min-height: auto;
+      }
+
+      .hero-float.top {
+        right: 10px;
+      }
+
+      .hero-float.bottom {
+        left: 10px;
       }
     }
 
@@ -1220,12 +1337,26 @@
         min-height: 500px;
       }
 
-      .hero-sidecopy h3 {
+      .device-primary-card h3 {
         font-size: 24px;
       }
 
       .proof-strip-inner {
         padding: 18px;
+      }
+
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .hero-float {
+        position: static;
+        max-width: none;
+        margin-top: 14px;
+      }
+
+      .device-stat-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -1341,46 +1472,69 @@
           <div class="device-shell">
             <div class="device-screen">
               <div class="device-topline">
-                <span>OpenLay device vault</span>
+                <span>OpenLay Authenticator</span>
                 <span class="device-badge">On-device only</span>
               </div>
-              <img src="icon-app-vpn/vpn-icon-320x320.png" alt="OpenLay security app icon">
-              <h3>Private keys stay inside the chip.</h3>
-              <p>Every sign request is handled locally. The app returns a signature, not the private key.</p>
+              <div class="device-header">
+                <div class="device-header-copy">
+                  <div class="device-mark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <path d="M9 12l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div class="device-title">
+                    <strong>Private key vault</strong>
+                    <span>Bound to Secure Enclave or TEE</span>
+                  </div>
+                </div>
+                <span class="device-status">Ready</span>
+              </div>
+              <div class="device-priority">
+                <div class="device-primary-card">
+                  <h3>Private keys stay inside the chip.</h3>
+                  <p>Requests are signed locally. The app returns a signature, never the private key.</p>
+                  <div class="device-chip-row">
+                    <span class="device-chip"><strong>P-256</strong> hardware-backed</span>
+                    <span class="device-chip"><strong>No export</strong> enforced</span>
+                  </div>
+                </div>
+                <div class="device-stat-grid">
+                  <div class="device-stat-card">
+                    <span>Platform coverage</span>
+                    <strong>iOS + Android</strong>
+                  </div>
+                  <div class="device-stat-card">
+                    <span>Core mode</span>
+                    <strong>Offline-first</strong>
+                  </div>
+                </div>
+              </div>
               <div class="device-stack">
                 <div class="device-row">
-                  <span>Secure element</span>
-                  <strong>Active</strong>
+                  <span>Authenticator</span>
+                  <strong>Beta available</strong>
                 </div>
                 <div class="device-row">
-                  <span>Key export</span>
-                  <strong>Disabled</strong>
+                  <span>Notes</span>
+                  <strong>Encrypted by default</strong>
                 </div>
                 <div class="device-row">
-                  <span>Network dependency</span>
-                  <strong>Optional</strong>
+                  <span>Zero Trust Access</span>
+                  <strong>Device-bound keys</strong>
                 </div>
               </div>
             </div>
           </div>
-          <div class="hero-sidecopy">
-            <span class="hero-kicker">Inside the app</span>
-            <h3>Less dashboard chrome. More signal.</h3>
-            <p>One visual anchor makes the page feel like a product, not just a list of claims.</p>
-            <ul class="hero-points">
-              <li>
-                <strong>Fast to parse</strong>
-                <span>The preview immediately explains where the key lives and what never leaves the device.</span>
-              </li>
-              <li>
-                <strong>More credible</strong>
-                <span>Signal-heavy copy plus a product image lands better than another block of dark cards.</span>
-              </li>
-              <li>
-                <strong>Still lightweight</strong>
-                <span>No heavy framework, no extra dependencies, just a clearer visual hierarchy.</span>
-              </li>
-            </ul>
+          <div class="hero-float top">
+            <span class="hero-float-label">Security model</span>
+            <strong>Non-exportable keys</strong>
+            <p>Generated inside hardware, then used in place for signing.</p>
+          </div>
+          <div class="hero-float bottom">
+            <span class="hero-float-label">Why it matters</span>
+            <strong>Audit the implementation</strong>
+            <p>Open repositories make the trust model verifiable instead of implied.</p>
           </div>
         </div>
       </div>
