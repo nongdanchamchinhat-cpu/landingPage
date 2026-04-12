@@ -1353,24 +1353,28 @@
       }
 
       .device-shell {
-        width: min(100%, 320px);
-        padding: 12px;
-        border-radius: 28px;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+        overflow: visible;
       }
 
       .device-screen {
         min-height: auto;
-        padding: 44px 18px 18px;
-        border-radius: 20px;
+        padding: 18px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
       }
 
       .device-shell::before {
-        top: 8px;
-        height: 18px;
+        display: none;
       }
 
       .device-topline {
-        margin-bottom: 16px;
+        margin-bottom: 14px;
         font-size: 10px;
       }
 
@@ -1395,14 +1399,14 @@
         font-size: 10px;
       }
 
-      .device-primary-card h3 {
-        font-size: 20px;
-        max-width: 220px;
-      }
-
       .device-primary-card {
         padding: 16px;
         border-radius: 18px;
+      }
+
+      .device-primary-card h3 {
+        font-size: 22px;
+        max-width: 240px;
       }
 
       .device-primary-card p {
@@ -1419,9 +1423,13 @@
         font-size: 11px;
       }
 
-      .device-stat-grid,
       .device-stack {
         display: none;
+      }
+
+      .device-stat-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .proof-strip-inner {
@@ -1435,10 +1443,6 @@
         min-height: auto;
       }
 
-      .device-shell {
-        width: 100%;
-      }
-
       .hero-float {
         position: static;
         max-width: none;
@@ -1447,7 +1451,7 @@
       }
 
       .device-stat-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
   </style>
