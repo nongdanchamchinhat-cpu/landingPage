@@ -1133,6 +1133,102 @@
     }
 
     /* ══════════════════════════════════════
+   CONTACT
+   ══════════════════════════════════════ */
+    .contact-section {
+      padding-top: 96px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .contact-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+        var(--bg-card);
+    }
+
+    .contact-card h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-item {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .contact-label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent-alt);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      word-break: break-word;
+    }
+
+    .contact-sub {
+      margin-top: 6px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .contact-company-name {
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+
+    .contact-company-copy {
+      max-width: 480px;
+      margin-bottom: 22px;
+      color: var(--text-secondary);
+      font-size: 16px;
+    }
+
+    .contact-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    /* ══════════════════════════════════════
    FOOTER
    ══════════════════════════════════════ */
     .footer {
@@ -1256,6 +1352,10 @@
         grid-template-columns: 1fr;
       }
 
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
       .footer-links {
         gap: 32px;
       }
@@ -1350,6 +1450,10 @@
 
       .cta-shell {
         padding: 28px 22px;
+      }
+
+      .contact-card {
+        padding: 22px;
       }
 
       .device-shell {
@@ -1473,8 +1577,7 @@
       <ul class="nav-links" id="primary-nav">
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#solutions">Solutions</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="https://github.com/openlay" target="_blank" rel="noopener" class="nav-cta">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path
@@ -1509,7 +1612,7 @@
             helping protect digital assets and optimize operational workflows for global businesses.
           </p>
           <div class="hero-actions">
-            <a href="contact.html" class="btn btn-primary">
+            <a href="#contact" class="btn btn-primary">
               Get a Consultation
             </a>
             <a href="#services" class="btn btn-ghost">
@@ -1675,7 +1778,7 @@
             Providing a professional software development team, from Mobile Apps to Web Systems, ensuring international quality and maximum security.
           </p>
           <div class="product-license">24/7 Expert Team</div>
-          <a href="contact.html" class="product-link">
+          <a href="#contact" class="product-link">
             Get a Quote
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
               <line x1="5" y1="12" x2="19" y2="12" />
@@ -1824,112 +1927,54 @@
   </section>
 
   <!-- ═══════════════════════════════════
-     SECURITY
+     CONTACT
      ═══════════════════════════════════ -->
-  <section class="section security" id="solutions">
+  <section class="section contact-section" id="contact">
     <div class="container">
-      <div class="section-label">Solutions</div>
-      <h2 class="section-title">Professional Workflow</h2>
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Talk to OpenLay</h2>
       <p class="section-desc">
-        We apply a 3-stage model to ensure success for every project.
+        For partnership, product, legal, or company inquiries, use the contact details below.
       </p>
-      <div class="security-content">
-        <div class="security-visual fade-in">
-          <span class="code-comment">// Stage 1: Survey & Analysis</span><br>
-          <span class="code-key">audit</span>: <span class="code-str">"Vulnerability Analysis & Requirements"</span><br>
-          <span class="code-key">strategy</span>: <span class="code-str">"Optimal Solution Design"</span><br><br>
-          <span class="code-comment">// Stage 2: Development & Deployment</span><br>
-          <span class="code-key">build</span>: <span class="code-str">"Security-Standard Programming"</span><br>
-          <span class="code-key">deploy</span>: <span class="code-str">"Testing & Handover"</span><br><br>
-          <span class="code-comment">// Stage 3: Monitoring & Maintenance</span><br>
-          <span class="code-key">monitor</span>: <span class="code-str">"24/7 Technical Support"</span>
-        </div>
-        <div class="security-points fade-in">
-          <div class="security-point">
-            <div class="check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
+      <div class="contact-grid">
+        <div class="contact-card fade-in">
+          <h3>Primary contact</h3>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <div class="contact-value"><a href="mailto:ad@openlay.com">ad@openlay.com</a></div>
             </div>
-            <div>
-              <h4>In-depth Analysis</h4>
-              <p>Understanding the client's problem to provide the most sustainable and secure software architecture.</p>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <div class="contact-value"><a href="tel:+971582070914">971-582070914</a></div>
             </div>
-          </div>
-          <div class="security-point">
-            <div class="check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-            <div>
-              <h4>Lean Development</h4>
-              <p>Using modern frameworks and automated CI/CD processes to optimize delivery time.</p>
-            </div>
-          </div>
-          <div class="security-point">
-            <div class="check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-            <div>
-              <h4>Multi-layer Security</h4>
-              <p>Applying security measures from the OS, Network, to the Application layer.</p>
-            </div>
-          </div>
-          <div class="security-point">
-            <div class="check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-            <div>
-              <h4>Lifelong Partnership</h4>
-              <p>Your system will always be updated with patches and periodic performance optimization.</p>
+            <div class="contact-item">
+              <span class="contact-label">Address</span>
+              <div class="contact-value">OBAID BUDOOR BLDG, Naif dubai</div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════
-     OPEN SOURCE CTA
-     ═══════════════════════════════════ -->
-  <section class="section opensource-cta">
-    <div class="container">
-      <div class="cta-shell fade-in">
-        <div class="cta-copy">
-          <div class="section-label">Partner Now</div>
-          <h2 class="section-title">Ready to elevate<br>your technology?</h2>
-          <p class="section-desc">
-            Let us help you solve the technical and security challenges for your business.
+        <div class="contact-card fade-in">
+          <h3 class="contact-company-name">Open layer technologies L.L.C S.O.C</h3>
+          <p class="contact-company-copy">
+            OpenLay builds open-source security products and enterprise security systems with a privacy-first operating model.
           </p>
-        </div>
-        <div class="cta-actions">
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-primary">
-              Contact for Cooperation
-            </a>
-            <a href="#services" class="btn btn-ghost">
-              View Service Price List
-            </a>
+          <div class="contact-pill-row">
+            <span class="contact-pill">Hardware-backed security</span>
+            <span class="contact-pill">Open source</span>
+            <span class="contact-pill">Zero tracking</span>
+            <span class="contact-pill">Offline-first</span>
           </div>
-          <div class="license-badges">
-            <span class="license-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-              Absolute Security
-            </span>
-            <span class="license-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              Expert Team
-            </span>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-label">Business name</span>
+              <div class="contact-value">Open layer technologies L.L.C S.O.C</div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Company email</span>
+              <div class="contact-value"><a href="mailto:ad@openlay.com">ad@openlay.com</a></div>
+              <div class="contact-sub">Use this address for direct company communication.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1964,9 +2009,9 @@
             <h4>Resources</h4>
             <ul>
               <li><a href="#">Technical Docs</a></li>
-              <li><a href="#solutions">Workflow</a></li>
+              <li><a href="#contact">Contact</a></li>
               <li><a href="#">Tech Blog</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="mailto:ad@openlay.com">ad@openlay.com</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -1987,7 +2032,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Open Lay Security Technologies. All rights reserved.</span>
+        <span>&copy; 2026 Open layer technologies L.L.C S.O.C</span>
         <span>Creating sustainable security systems.</span>
       </div>
     </div>
