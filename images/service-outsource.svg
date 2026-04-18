@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" role="img" aria-label="Outsourcing teams illustration">
+  <defs>
+    <linearGradient id="outBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1726" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#151d2e" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="outGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4dd6ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#4dd6ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="outCenter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4dd6ff"/>
+      <stop offset="100%" stop-color="#9b7aff"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="240" fill="url(#outBg)"/>
+
+  <!-- grid dots -->
+  <g fill="#8b95a8" fill-opacity="0.14">
+    <circle cx="60" cy="40" r="1.2"/><circle cx="120" cy="40" r="1.2"/><circle cx="180" cy="40" r="1.2"/>
+    <circle cx="300" cy="40" r="1.2"/><circle cx="360" cy="40" r="1.2"/><circle cx="420" cy="40" r="1.2"/>
+    <circle cx="60" cy="200" r="1.2"/><circle cx="120" cy="200" r="1.2"/><circle cx="180" cy="200" r="1.2"/>
+    <circle cx="300" cy="200" r="1.2"/><circle cx="360" cy="200" r="1.2"/><circle cx="420" cy="200" r="1.2"/>
+  </g>
+
+  <!-- connections -->
+  <g stroke="#4dd6ff" stroke-opacity="0.35" stroke-width="1">
+    <line x1="240" y1="120" x2="90" y2="60"/>
+    <line x1="240" y1="120" x2="390" y2="60"/>
+    <line x1="240" y1="120" x2="60" y2="130"/>
+    <line x1="240" y1="120" x2="420" y2="130"/>
+    <line x1="240" y1="120" x2="110" y2="200"/>
+    <line x1="240" y1="120" x2="370" y2="200"/>
+  </g>
+
+  <!-- outer glow -->
+  <circle cx="240" cy="120" r="80" fill="url(#outGlow)"/>
+
+  <!-- peripheral member nodes -->
+  <g>
+    <g transform="translate(90 60)">
+      <circle r="18" fill="#151d2e" stroke="#4dd6ff" stroke-width="1.5"/>
+      <circle cy="-3" r="5" fill="#4dd6ff"/>
+      <path d="M-8 8 Q0 2 8 8 L8 12 L-8 12 Z" fill="#4dd6ff"/>
+    </g>
+    <g transform="translate(390 60)">
+      <circle r="18" fill="#151d2e" stroke="#9b7aff" stroke-width="1.5"/>
+      <circle cy="-3" r="5" fill="#9b7aff"/>
+      <path d="M-8 8 Q0 2 8 8 L8 12 L-8 12 Z" fill="#9b7aff"/>
+    </g>
+    <g transform="translate(60 130)">
+      <circle r="18" fill="#151d2e" stroke="#9b7aff" stroke-width="1.5"/>
+      <circle cy="-3" r="5" fill="#9b7aff"/>
+      <path d="M-8 8 Q0 2 8 8 L8 12 L-8 12 Z" fill="#9b7aff"/>
+    </g>
+    <g transform="translate(420 130)">
+      <circle r="18" fill="#151d2e" stroke="#4dd6ff" stroke-width="1.5"/>
+      <circle cy="-3" r="5" fill="#4dd6ff"/>
+      <path d="M-8 8 Q0 2 8 8 L8 12 L-8 12 Z" fill="#4dd6ff"/>
+    </g>
+    <g transform="translate(110 200)">
+      <circle r="18" fill="#151d2e" stroke="#ffb86b" stroke-width="1.5"/>
+      <circle cy="-3" r="5" fill="#ffb86b"/>
+      <path d="M-8 8 Q0 2 8 8 L8 12 L-8 12 Z" fill="#ffb86b"/>
+    </g>
+    <g transform="translate(370 200)">
+      <circle r="18" fill="#151d2e" stroke="#ffb86b" stroke-width="1.5"/>
+      <circle cy="-3" r="5" fill="#ffb86b"/>
+      <path d="M-8 8 Q0 2 8 8 L8 12 L-8 12 Z" fill="#ffb86b"/>
+    </g>
+  </g>
+
+  <!-- center hub -->
+  <g transform="translate(240 120)">
+    <rect x="-44" y="-30" width="88" height="60" rx="10"
+          fill="url(#outCenter)" fill-opacity="0.18"
+          stroke="#4dd6ff" stroke-width="1.5"/>
+    <rect x="-30" y="-16" width="60" height="3" rx="1.5" fill="#4dd6ff" fill-opacity="0.6"/>
+    <rect x="-30" y="-8" width="42" height="3" rx="1.5" fill="#9b7aff" fill-opacity="0.6"/>
+    <rect x="-30" y="0" width="54" height="3" rx="1.5" fill="#ffb86b" fill-opacity="0.6"/>
+    <rect x="-30" y="8" width="30" height="3" rx="1.5" fill="#4dd6ff" fill-opacity="0.6"/>
+    <rect x="-30" y="16" width="48" height="3" rx="1.5" fill="#9b7aff" fill-opacity="0.6"/>
+  </g>
+</svg>

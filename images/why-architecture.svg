@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-label="Security-led execution architecture diagram">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151d2e"/>
+      <stop offset="100%" stop-color="#0f1726"/>
+    </linearGradient>
+    <linearGradient id="archCore" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9b7aff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#4dd6ff" stop-opacity="0.2"/>
+    </linearGradient>
+    <radialGradient id="archGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9b7aff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#9b7aff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="archGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0 L0 0 0 20" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="520" height="400" fill="url(#archBg)" rx="16"/>
+  <rect width="520" height="400" fill="url(#archGrid)" rx="16"/>
+
+  <!-- ambient glow -->
+  <circle cx="260" cy="200" r="180" fill="url(#archGlow)"/>
+
+  <!-- orbit rings -->
+  <g fill="none" stroke="#4dd6ff" stroke-opacity="0.18" stroke-dasharray="2 6">
+    <ellipse cx="260" cy="200" rx="220" ry="120"/>
+    <ellipse cx="260" cy="200" rx="160" ry="80"/>
+  </g>
+
+  <!-- connection paths -->
+  <g fill="none" stroke="#9b7aff" stroke-opacity="0.45" stroke-width="1.2">
+    <path d="M260 200 Q160 130 70 110"/>
+    <path d="M260 200 Q360 130 450 110"/>
+    <path d="M260 200 Q160 270 70 290"/>
+    <path d="M260 200 Q360 270 450 290"/>
+    <path d="M260 200 L260 60"/>
+    <path d="M260 200 L260 340"/>
+  </g>
+
+  <!-- perimeter service nodes -->
+  <g font-family="DM Sans, sans-serif" font-size="11" fill="#e8edf5" text-anchor="middle">
+    <!-- top -->
+    <g transform="translate(260 52)">
+      <rect x="-56" y="-18" width="112" height="36" rx="10" fill="#151d2e" stroke="#4dd6ff" stroke-width="1.2"/>
+      <text y="5">Risk Assessment</text>
+    </g>
+    <!-- top-left -->
+    <g transform="translate(70 104)">
+      <rect x="-48" y="-18" width="96" height="36" rx="10" fill="#151d2e" stroke="#9b7aff" stroke-width="1.2"/>
+      <text y="5">Architecture</text>
+    </g>
+    <!-- top-right -->
+    <g transform="translate(450 104)">
+      <rect x="-48" y="-18" width="96" height="36" rx="10" fill="#151d2e" stroke="#9b7aff" stroke-width="1.2"/>
+      <text y="5">Hardening</text>
+    </g>
+    <!-- bottom-left -->
+    <g transform="translate(70 296)">
+      <rect x="-48" y="-18" width="96" height="36" rx="10" fill="#151d2e" stroke="#ffb86b" stroke-width="1.2"/>
+      <text y="5">Deployment</text>
+    </g>
+    <!-- bottom-right -->
+    <g transform="translate(450 296)">
+      <rect x="-48" y="-18" width="96" height="36" rx="10" fill="#151d2e" stroke="#ffb86b" stroke-width="1.2"/>
+      <text y="5">Operations</text>
+    </g>
+    <!-- bottom -->
+    <g transform="translate(260 348)">
+      <rect x="-56" y="-18" width="112" height="36" rx="10" fill="#151d2e" stroke="#4dd6ff" stroke-width="1.2"/>
+      <text y="5">Monitoring</text>
+    </g>
+  </g>
+
+  <!-- central core -->
+  <g transform="translate(260 200)">
+    <circle r="66" fill="url(#archCore)" stroke="#b69bff" stroke-width="1.5"/>
+    <circle r="48" fill="none" stroke="#4dd6ff" stroke-opacity="0.35" stroke-dasharray="3 4"/>
+    <!-- shield glyph -->
+    <path d="M0 -30 L24 -20 L24 6 C24 20 12 30 0 34 C-12 30 -24 20 -24 6 L-24 -20 Z"
+          fill="#0a0e17" stroke="#b69bff" stroke-width="1.5"/>
+    <path d="M-10 2 L-2 10 L12 -6" fill="none" stroke="#ffffff" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- small connection dots -->
+  <g fill="#4dd6ff">
+    <circle cx="260" cy="200" r="2.5" fill="#b69bff"/>
+  </g>
+</svg>
