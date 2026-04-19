@@ -1,67 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" role="img" aria-label="Enterprise platform delivery illustration">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Enterprise platform delivery illustration">
   <defs>
     <linearGradient id="platBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#151d2e"/>
-      <stop offset="100%" stop-color="#0a0e17"/>
+      <stop offset="0%" stop-color="#1a1430"/>
+      <stop offset="100%" stop-color="#0f1422"/>
     </linearGradient>
     <linearGradient id="layerA" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#9b7aff" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#9b7aff" stop-opacity="0.15"/>
+      <stop offset="0%" stop-color="#9b7aff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#9b7aff" stop-opacity="0.18"/>
     </linearGradient>
     <linearGradient id="layerB" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4dd6ff" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#4dd6ff" stop-opacity="0.12"/>
+      <stop offset="0%" stop-color="#4dd6ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#4dd6ff" stop-opacity="0.14"/>
     </linearGradient>
     <linearGradient id="layerC" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffb86b" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#ffb86b" stop-opacity="0.12"/>
+      <stop offset="0%" stop-color="#ffb86b" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffb86b" stop-opacity="0.14"/>
     </linearGradient>
+    <radialGradient id="platGlow" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#9b7aff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#9b7aff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="platGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0 L0 0 0 24" fill="none" stroke="#9b7aff" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
   </defs>
+
   <rect width="480" height="240" fill="url(#platBg)"/>
+  <rect width="480" height="240" fill="url(#platGrid)"/>
+  <circle cx="240" cy="130" r="130" fill="url(#platGlow)"/>
 
-  <!-- ambient -->
-  <circle cx="240" cy="120" r="180" fill="#9b7aff" fill-opacity="0.06"/>
-
-  <!-- isometric stacked layers -->
-  <g transform="translate(240 120)">
-    <!-- layer 3 (top) -->
-    <g transform="translate(0 -48)">
-      <polygon points="-120,0 0,-36 120,0 0,36" fill="url(#layerA)" stroke="#9b7aff" stroke-width="1.2"/>
-      <circle cx="-70" cy="0" r="4" fill="#b69bff"/>
-      <circle cx="-24" cy="10" r="4" fill="#b69bff"/>
-      <circle cx="30" cy="-6" r="4" fill="#b69bff"/>
-      <circle cx="74" cy="6" r="4" fill="#b69bff"/>
+  <g transform="translate(240 130)">
+    <g transform="translate(0 -50)">
+      <polygon points="-110,0 0,-32 110,0 0,32" fill="url(#layerA)" stroke="#9b7aff" stroke-width="1.2"/>
+      <circle cx="-64" cy="0" r="3.5" fill="#b69bff"/>
+      <circle cx="-22" cy="9" r="3.5" fill="#b69bff"/>
+      <circle cx="26" cy="-5" r="3.5" fill="#b69bff"/>
+      <circle cx="68" cy="5" r="3.5" fill="#b69bff"/>
     </g>
-    <!-- connector -->
-    <line x1="0" y1="-12" x2="0" y2="0" stroke="#4dd6ff" stroke-opacity="0.5" stroke-dasharray="2 3"/>
-    <!-- layer 2 -->
-    <g transform="translate(0 12)">
-      <polygon points="-120,0 0,-36 120,0 0,36" fill="url(#layerB)" stroke="#4dd6ff" stroke-width="1.2"/>
-      <rect x="-60" y="-6" width="40" height="6" rx="2" fill="#4dd6ff" fill-opacity="0.55"/>
-      <rect x="-10" y="-2" width="28" height="6" rx="2" fill="#4dd6ff" fill-opacity="0.55"/>
-      <rect x="28" y="-10" width="36" height="6" rx="2" fill="#4dd6ff" fill-opacity="0.55"/>
+    <line x1="0" y1="-14" x2="0" y2="-2" stroke="#4dd6ff" stroke-opacity="0.5" stroke-dasharray="2 3"/>
+    <g transform="translate(0 10)">
+      <polygon points="-110,0 0,-32 110,0 0,32" fill="url(#layerB)" stroke="#4dd6ff" stroke-width="1.2"/>
+      <rect x="-54" y="-6" width="36" height="5" rx="2" fill="#4dd6ff" fill-opacity="0.6"/>
+      <rect x="-10" y="-2" width="24" height="5" rx="2" fill="#4dd6ff" fill-opacity="0.6"/>
+      <rect x="26" y="-9" width="32" height="5" rx="2" fill="#4dd6ff" fill-opacity="0.6"/>
     </g>
-    <line x1="0" y1="48" x2="0" y2="60" stroke="#ffb86b" stroke-opacity="0.5" stroke-dasharray="2 3"/>
-    <!-- layer 1 (base) -->
-    <g transform="translate(0 72)">
-      <polygon points="-120,0 0,-36 120,0 0,36" fill="url(#layerC)" stroke="#ffb86b" stroke-width="1.2"/>
-      <g fill="#ffb86b" fill-opacity="0.7">
-        <rect x="-70" y="-2" width="8" height="8" rx="1"/>
-        <rect x="-50" y="4" width="8" height="8" rx="1"/>
-        <rect x="-30" y="-4" width="8" height="8" rx="1"/>
-        <rect x="-10" y="2" width="8" height="8" rx="1"/>
-        <rect x="10" y="-2" width="8" height="8" rx="1"/>
-        <rect x="30" y="4" width="8" height="8" rx="1"/>
-        <rect x="50" y="-4" width="8" height="8" rx="1"/>
-        <rect x="70" y="2" width="8" height="8" rx="1"/>
+    <line x1="0" y1="42" x2="0" y2="54" stroke="#ffb86b" stroke-opacity="0.5" stroke-dasharray="2 3"/>
+    <g transform="translate(0 66)">
+      <polygon points="-110,0 0,-32 110,0 0,32" fill="url(#layerC)" stroke="#ffb86b" stroke-width="1.2"/>
+      <g fill="#ffb86b" fill-opacity="0.75">
+        <rect x="-64" y="-2" width="7" height="7" rx="1"/>
+        <rect x="-46" y="4" width="7" height="7" rx="1"/>
+        <rect x="-28" y="-4" width="7" height="7" rx="1"/>
+        <rect x="-10" y="2" width="7" height="7" rx="1"/>
+        <rect x="8" y="-2" width="7" height="7" rx="1"/>
+        <rect x="26" y="4" width="7" height="7" rx="1"/>
+        <rect x="44" y="-4" width="7" height="7" rx="1"/>
+        <rect x="62" y="2" width="7" height="7" rx="1"/>
       </g>
     </g>
-  </g>
-
-  <!-- side labels -->
-  <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8b95a8" fill-opacity="0.7">
-    <text x="40" y="78">app</text>
-    <text x="40" y="130">api</text>
-    <text x="40" y="196">infra</text>
   </g>
 </svg>
