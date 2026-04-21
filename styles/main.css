@@ -7,23 +7,18 @@
       --bg-tertiary: #0f1726;
       --bg-card: #151d2e;
       --bg-card-hover: #1a2540;
-      --bg-accent: #1a1040;
       --text-primary: #e8edf5;
       --text-secondary: #8b95a8;
       --text-muted: #5a6478;
       --accent: #9b7aff;
       --accent-alt: #4dd6ff;
       --accent-warm: #ffb86b;
-      --success: #4ade80;
-      --accent-dim: #7c5ce7;
       --accent-glow: rgba(155, 122, 255, 0.12);
-      --accent-glow-strong: rgba(155, 122, 255, 0.25);
       --border: rgba(255, 255, 255, 0.06);
       --border-accent: rgba(155, 122, 255, 0.2);
       --font-body: 'DM Sans', system-ui, sans-serif;
       --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
       --max-w: 1120px;
-      --radius: 8px;
       --radius-sm: 8px;
       --radius-lg: 8px;
     }
@@ -63,6 +58,12 @@
 
     a:hover {
       opacity: 0.8;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent-alt);
+      outline-offset: 3px;
     }
 
     img {
@@ -361,200 +362,6 @@
       margin-top: 0;
     }
 
-    .device-screen {
-      position: relative;
-      height: 100%;
-      min-height: 584px;
-      border-radius: 24px;
-      background:
-        radial-gradient(circle at top left, rgba(77, 214, 255, 0.12), transparent 35%),
-        linear-gradient(180deg, #121b2e 0%, #0b1220 100%);
-      padding: 56px 24px 24px;
-    }
-
-    .device-topline {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-secondary);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-
-    .device-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      color: var(--success);
-      background: rgba(74, 222, 128, 0.12);
-    }
-
-    .device-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 18px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    .device-header-copy {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .device-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(180deg, rgba(155, 122, 255, 0.24), rgba(77, 214, 255, 0.18));
-      color: #fff;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-    }
-
-    .device-mark svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .device-title {
-      display: grid;
-      gap: 3px;
-    }
-
-    .device-title strong {
-      font-size: 16px;
-      line-height: 1.2;
-    }
-
-    .device-title span {
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    .device-status {
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(77, 214, 255, 0.12);
-      color: var(--accent-alt);
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .device-priority {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .device-primary-card {
-      padding: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 22px;
-      background:
-        linear-gradient(180deg, rgba(155, 122, 255, 0.12), rgba(255, 255, 255, 0.02)),
-        rgba(255, 255, 255, 0.02);
-    }
-
-    .device-primary-card h3 {
-      font-size: 28px;
-      line-height: 1.08;
-      margin-bottom: 10px;
-      max-width: 260px;
-    }
-
-    .device-primary-card p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-bottom: 18px;
-      max-width: 280px;
-    }
-
-    .device-chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .device-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(10, 14, 23, 0.45);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--text-secondary);
-      font-size: 12px;
-    }
-
-    .device-chip strong {
-      color: var(--text-primary);
-      font-size: 12px;
-    }
-
-    .device-stat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .device-stat-card {
-      padding: 16px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .device-stat-card span {
-      display: block;
-      font-size: 12px;
-      color: var(--text-secondary);
-      margin-bottom: 6px;
-    }
-
-    .device-stat-card strong {
-      font-size: 18px;
-      line-height: 1.2;
-    }
-
-    .device-stack {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .device-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding: 15px 16px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.025);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    .device-row strong {
-      color: var(--text-primary);
-      font-weight: 600;
-    }
-
     .hero-float {
       position: absolute;
       z-index: 2;
@@ -705,53 +512,6 @@
       background: linear-gradient(90deg, transparent, var(--accent), transparent);
     }
 
-    .product-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      font-size: 22px;
-    }
-
-    .product-icon.auth {
-      background: rgba(155, 122, 255, 0.1);
-      color: var(--accent);
-    }
-
-    .product-icon.notes {
-      background: rgba(99, 179, 237, 0.1);
-      color: #63b3ed;
-    }
-
-    .product-icon.vpn {
-      background: rgba(251, 191, 36, 0.1);
-      color: #fbbf24;
-    }
-
-    .product-badge {
-      display: inline-flex;
-      padding: 4px 10px;
-      border-radius: 100px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .badge-available {
-      background: rgba(45, 212, 168, 0.15);
-      color: var(--accent);
-    }
-
-    .badge-soon {
-      background: rgba(139, 149, 168, 0.15);
-      color: var(--text-secondary);
-    }
-
     .product-card h3 {
       font-size: 20px;
       font-weight: 600;
@@ -769,26 +529,6 @@
       font-family: var(--font-mono);
       font-size: 12px;
       color: var(--text-muted);
-    }
-
-    .product-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 16px;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--accent);
-    }
-
-    .product-link svg {
-      width: 14px;
-      height: 14px;
-      transition: transform 0.2s;
-    }
-
-    .product-link:hover svg {
-      transform: translateX(3px);
     }
 
     /* ══════════════════════════════════════
@@ -894,6 +634,15 @@
       height: 20px;
     }
 
+    .feature-kicker {
+      margin-bottom: 6px;
+      color: var(--accent-alt);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     .feature-card h3 {
       font-size: 17px;
       font-weight: 600;
@@ -904,158 +653,6 @@
       font-size: 15px;
       color: var(--text-secondary);
       line-height: 1.65;
-    }
-
-    /* ══════════════════════════════════════
-   SECURITY SECTION
-   ══════════════════════════════════════ */
-    .security {
-      background: var(--bg-secondary);
-    }
-
-    .security-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      margin-top: 48px;
-    }
-
-    .security-visual {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 40px 32px;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      line-height: 2;
-      color: var(--text-secondary);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .security-visual::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 3px;
-      height: 100%;
-      background: var(--accent);
-      border-radius: 0 2px 2px 0;
-    }
-
-    .code-comment {
-      color: var(--text-muted);
-    }
-
-    .code-key {
-      color: var(--accent);
-    }
-
-    .code-value {
-      color: #63b3ed;
-    }
-
-    .code-str {
-      color: #d6bcfa;
-    }
-
-    .security-points {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .security-point {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .security-point .check {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--accent-glow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-      color: var(--accent);
-    }
-
-    .security-point .check svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    .security-point h4 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .security-point p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    /* ══════════════════════════════════════
-   OPEN SOURCE CTA
-   ══════════════════════════════════════ */
-    .opensource-cta {
-      padding: 100px 0 120px;
-    }
-
-    .cta-shell {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 36px;
-      align-items: end;
-      padding: 36px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      background:
-        linear-gradient(135deg, rgba(155, 122, 255, 0.08), rgba(77, 214, 255, 0.08)),
-        linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(10, 14, 23, 0.98));
-    }
-
-    .cta-copy .section-title {
-      max-width: 600px;
-      margin-bottom: 16px;
-    }
-
-    .cta-actions {
-      display: grid;
-      justify-items: start;
-      gap: 20px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .license-badges {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .license-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-muted);
     }
 
     /* ══════════════════════════════════════
@@ -1152,161 +749,10 @@
       font-size: 13px;
     }
 
-    .legal-section .section-desc {
-      max-width: 760px;
-    }
-
-    .legal-top {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
-      gap: 24px;
-      align-items: start;
-      margin-top: 28px;
-    }
-
-    .legal-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .legal-nav a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-secondary);
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .legal-nav a::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: rgba(155, 122, 255, 0.85);
-      box-shadow: 0 0 16px rgba(155, 122, 255, 0.45);
-    }
-
-    .legal-note {
-      padding: 18px 20px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-md);
-      background:
-        linear-gradient(135deg, rgba(155, 122, 255, 0.08), rgba(77, 214, 255, 0.06)),
-        rgba(17, 24, 39, 0.8);
-    }
-
-    .legal-note-label {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--accent-alt);
-      font-family: var(--font-mono);
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .legal-note p {
-      color: var(--text-primary);
-      font-size: 15px;
-      line-height: 1.65;
-    }
-
-    .legal-grid {
-      margin-top: 24px;
-    }
-
-    .legal-card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .legal-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 34%);
-    }
-
-    .legal-card--accent {
-      border-color: rgba(155, 122, 255, 0.18);
-      background:
-        linear-gradient(180deg, rgba(155, 122, 255, 0.08), rgba(255, 255, 255, 0)),
-        var(--bg-card);
-    }
-
-    .legal-card-head {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-
-    .legal-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(155, 122, 255, 0.08);
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 auto;
-    }
-
-    .legal-icon svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .legal-kicker {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--accent-alt);
-      font-family: var(--font-mono);
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .legal-card .contact-card-title {
-      margin: 0;
-      font-size: 24px;
-      line-height: 1.1;
-    }
-
-    .legal-card .contact-value {
-      font-size: 17px;
-      line-height: 1.65;
-      font-weight: 500;
-      color: rgba(238, 242, 255, 0.9);
-    }
-
-    .legal-card .contact-label {
-      color: var(--text-muted);
-    }
-
-    .legal-footer-note {
-      margin-top: 18px;
-      padding: 16px 20px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.025);
-      color: var(--text-secondary);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .legal-footer-note a {
-      color: var(--text-primary);
-      font-weight: 600;
+    .inline-contact-link {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     /* ══════════════════════════════════════
@@ -1457,7 +903,6 @@
       }
 
       .hero-inner,
-      .cta-shell,
       .feature-spotlight {
         grid-template-columns: 1fr;
       }
@@ -1475,15 +920,7 @@
         grid-template-columns: 1fr;
       }
 
-      .security-content {
-        grid-template-columns: 1fr;
-      }
-
       .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .legal-top {
         grid-template-columns: 1fr;
       }
 
@@ -1545,12 +982,6 @@
         justify-content: center;
       }
 
-      .cta-buttons,
-      .license-badges {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
       .section {
         padding: 40px 0;
       }
@@ -1581,16 +1012,8 @@
         bottom: 78px;
       }
 
-      .cta-shell {
-        padding: 28px 22px;
-      }
-
       .contact-card {
         padding: 22px;
-      }
-
-      .legal-card-head {
-        align-items: flex-start;
       }
 
       .device-shell {
@@ -1601,76 +1024,6 @@
         background: none;
         box-shadow: none;
         overflow: visible;
-      }
-
-      .device-screen {
-        min-height: auto;
-        padding: 18px;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .device-shell::before {
-        display: none;
-      }
-
-      .device-topline {
-        margin-bottom: 14px;
-        font-size: 10px;
-      }
-
-      .device-header {
-        padding: 14px;
-        margin-bottom: 12px;
-        border-radius: 16px;
-      }
-
-      .device-mark {
-        width: 36px;
-        height: 36px;
-        border-radius: 12px;
-      }
-
-      .device-title strong {
-        font-size: 14px;
-      }
-
-      .device-title span,
-      .device-status {
-        font-size: 10px;
-      }
-
-      .device-primary-card {
-        padding: 16px;
-        border-radius: 18px;
-      }
-
-      .device-primary-card h3 {
-        font-size: 22px;
-        max-width: 240px;
-      }
-
-      .device-primary-card p {
-        font-size: 13px;
-        margin-bottom: 14px;
-      }
-
-      .device-chip-row {
-        gap: 8px;
-      }
-
-      .device-chip {
-        padding: 7px 10px;
-        font-size: 11px;
-      }
-
-      .device-stack {
-        display: none;
-      }
-
-      .device-stat-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .proof-strip-inner {
@@ -1689,10 +1042,6 @@
         max-width: none;
         width: 100%;
         margin-top: 0;
-      }
-
-      .device-stat-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
@@ -1738,6 +1087,11 @@
   transform: translateY(0);
 }
 
+.modal-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
 .modal-close {
   position: absolute;
   top: 16px;
@@ -1760,4 +1114,29 @@
 .modal-close:hover {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
+}
+
+.legal-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-alt);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.legal-value {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.legal-question {
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.legal-question a {
+  color: var(--accent);
 }
