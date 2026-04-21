@@ -446,17 +446,54 @@
     }
 
     /* Service card illustrations */
-    .product-art {
-      display: block;
+    .product-art-frame {
+      position: relative;
       width: calc(100% + 56px);
       max-width: none;
       aspect-ratio: 2 / 1;
-      object-fit: cover;
       margin: -32px -28px 22px;
       border-top-left-radius: var(--radius-lg);
       border-top-right-radius: var(--radius-lg);
       border-bottom: 1px solid var(--border);
       background: linear-gradient(135deg, rgba(155, 122, 255, 0.08), rgba(77, 214, 255, 0.04));
+      overflow: hidden;
+    }
+
+    .product-art-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 80deg,
+        rgba(77, 214, 255, 0.95) 112deg,
+        rgba(155, 122, 255, 0.95) 138deg,
+        transparent 170deg,
+        transparent 360deg
+      );
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask-composite: exclude;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+    }
+
+    .product-card:hover .product-art-frame::after {
+      animation: product-border-sweep 1.2s linear infinite;
+      opacity: 1;
+    }
+
+    .product-art {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter 0.25s ease, transform 0.25s ease;
     }
 
     /* Why OpenLay spotlight illustration */
@@ -487,29 +524,23 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 32px 28px;
-      transition: border-color 0.3s, transform 0.2s;
+      transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
       position: relative;
       overflow: hidden;
     }
 
     .product-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-2px);
+      border-color: rgba(155, 122, 255, 0.34);
+      background:
+        linear-gradient(135deg, rgba(155, 122, 255, 0.09), rgba(77, 214, 255, 0.04)),
+        var(--bg-card-hover);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(155, 122, 255, 0.08);
+      transform: translateY(-4px);
     }
 
-    .product-card.featured {
-      border-color: var(--border-accent);
-      background: var(--bg-card-hover);
-    }
-
-    .product-card.featured::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    .product-card:hover .product-art {
+      filter: saturate(1.14) brightness(1.08);
+      transform: scale(1.015);
     }
 
     .product-card h3 {
@@ -610,23 +641,43 @@
       padding: 32px 28px;
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      transition: border-color 0.3s;
+      background: rgba(10, 14, 23, 0.24);
+      transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
     }
 
     .feature-card:hover {
-      border-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(155, 122, 255, 0.32);
+      background:
+        linear-gradient(135deg, rgba(155, 122, 255, 0.08), rgba(77, 214, 255, 0.04)),
+        rgba(17, 24, 39, 0.56);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(155, 122, 255, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .feature-heading {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 14px;
     }
 
     .feature-icon {
       width: 40px;
       height: 40px;
+      flex: 0 0 40px;
       border-radius: 10px;
       background: var(--accent-glow);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 18px;
       color: var(--accent);
+      transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      background: rgba(155, 122, 255, 0.2);
+      color: #bfaaff;
+      box-shadow: 0 0 24px rgba(155, 122, 255, 0.18);
     }
 
     .feature-icon svg {
@@ -646,7 +697,7 @@
     .feature-card h3 {
       font-size: 17px;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 0;
     }
 
     .feature-card p {
@@ -662,9 +713,13 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 36px;
+      grid-template-columns: minmax(0, 0.85fr) minmax(460px, 1.15fr);
+      gap: 44px;
+      align-items: start;
+    }
+
+    .contact-copy {
+      padding-top: 4px;
     }
 
     .contact-card {
@@ -872,6 +927,12 @@
    ANIMATIONS
    ══════════════════════════════════════ */
     @media (prefers-reduced-motion: no-preference) {
+      @keyframes product-border-sweep {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+
       .fade-in {
         opacity: 0;
         transform: translateY(20px);
@@ -885,6 +946,10 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+      .product-card:hover .product-art-frame::after {
+        animation: none;
+      }
+
       .fade-in {
         opacity: 1;
         transform: none;
@@ -991,8 +1056,10 @@
       }
 
       .footer-links {
-        flex-direction: column;
-        gap: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 24px;
+        width: 100%;
       }
 
       .footer-bottom {

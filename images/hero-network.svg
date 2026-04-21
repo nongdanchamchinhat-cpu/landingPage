@@ -1,15 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620" role="img" aria-label="Enterprise security network illustration">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620" role="img" aria-label="Enterprise operations command field illustration">
   <defs>
     <radialGradient id="heroBg" cx="50%" cy="35%" r="70%">
       <stop offset="0%" stop-color="#9b7aff" stop-opacity="0.18"/>
       <stop offset="55%" stop-color="#4dd6ff" stop-opacity="0.06"/>
       <stop offset="100%" stop-color="#0a0e17" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="shieldFill" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9b7aff" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#4dd6ff" stop-opacity="0.12"/>
+    <radialGradient id="commandFill" cx="50%" cy="45%" r="58%">
+      <stop offset="0%" stop-color="#9b7aff" stop-opacity="0.3"/>
+      <stop offset="62%" stop-color="#4dd6ff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0f1726" stop-opacity="0.16"/>
+    </radialGradient>
+    <linearGradient id="commandStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b69bff"/>
+      <stop offset="52%" stop-color="#4dd6ff"/>
+      <stop offset="100%" stop-color="#ffb86b"/>
     </linearGradient>
-    <linearGradient id="shieldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="moduleStroke" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#b69bff"/>
       <stop offset="100%" stop-color="#4dd6ff"/>
     </linearGradient>
@@ -58,14 +64,44 @@
     <circle cx="380" cy="560" r="8" fill="#9b7aff"/>
   </g>
 
-  <!-- central shield -->
+  <!-- central operations command field -->
   <g transform="translate(260 310)">
-    <path d="M0 -140 L120 -96 L120 20 C120 90 60 140 0 160 C-60 140 -120 90 -120 20 L-120 -96 Z"
-          fill="url(#shieldFill)" stroke="url(#shieldStroke)" stroke-width="2"/>
-    <path d="M0 -140 L120 -96 L120 20 C120 90 60 140 0 160 C-60 140 -120 90 -120 20 L-120 -96 Z"
-          fill="none" stroke="#9b7aff" stroke-opacity="0.25" stroke-width="1" transform="scale(0.72)"/>
-    <path d="M-44 6 L-10 40 L50 -30" fill="none" stroke="#e8edf5" stroke-width="6"
-          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle r="136" fill="url(#commandFill)" stroke="url(#commandStroke)" stroke-width="2"/>
+    <circle r="96" fill="none" stroke="#9b7aff" stroke-opacity="0.26" stroke-width="1.5"/>
+    <circle r="54" fill="#0f1726" fill-opacity="0.34" stroke="#4dd6ff" stroke-opacity="0.32"/>
+    <g fill="none" stroke-linecap="round">
+      <path d="M-118 0 A118 118 0 0 1 -24 -115" stroke="#9b7aff" stroke-width="8" stroke-opacity="0.62"/>
+      <path d="M34 -113 A118 118 0 0 1 118 -6" stroke="#4dd6ff" stroke-width="8" stroke-opacity="0.6"/>
+      <path d="M100 64 A118 118 0 0 1 -40 111" stroke="#ffb86b" stroke-width="8" stroke-opacity="0.5"/>
+      <path d="M-88 70 A112 112 0 0 1 -118 12" stroke="#4dd6ff" stroke-width="4" stroke-opacity="0.52"/>
+    </g>
+    <g stroke="#8b95a8" stroke-opacity="0.22">
+      <path d="M0 -136 V136"/>
+      <path d="M-136 0 H136"/>
+      <path d="M-96 -96 L96 96"/>
+      <path d="M96 -96 L-96 96"/>
+    </g>
+    <g>
+      <circle cx="0" cy="0" r="16" fill="#4dd6ff" fill-opacity="0.18" stroke="#4dd6ff" stroke-opacity="0.9"/>
+      <circle cx="0" cy="0" r="5" fill="#e8edf5"/>
+      <circle cx="-92" cy="-46" r="7" fill="#9b7aff"/>
+      <circle cx="74" cy="-72" r="7" fill="#4dd6ff"/>
+      <circle cx="86" cy="58" r="7" fill="#ffb86b"/>
+      <circle cx="-62" cy="82" r="7" fill="#4dd6ff"/>
+    </g>
+    <g fill="#0a0e17" fill-opacity="0.68" stroke="url(#moduleStroke)" stroke-width="1.4">
+      <rect x="-164" y="-18" width="72" height="36" rx="12"/>
+      <rect x="92" y="-102" width="78" height="36" rx="12"/>
+      <rect x="64" y="86" width="84" height="36" rx="12"/>
+    </g>
+    <g stroke-linecap="round" stroke-width="3">
+      <path d="M-146 -4 H-116" stroke="#4dd6ff" stroke-opacity="0.82"/>
+      <path d="M-146 9 H-128" stroke="#9b7aff" stroke-opacity="0.82"/>
+      <path d="M112 -88 H150" stroke="#9b7aff" stroke-opacity="0.82"/>
+      <path d="M112 -75 H134" stroke="#4dd6ff" stroke-opacity="0.82"/>
+      <path d="M84 100 H124" stroke="#ffb86b" stroke-opacity="0.78"/>
+      <path d="M84 113 H112" stroke="#4dd6ff" stroke-opacity="0.78"/>
+    </g>
   </g>
 
   <!-- floating code glyphs -->
